@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+}
+header {
+  border: 1px solid #ccc;
+  height: 100vh;
+  width: 300px;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+nav {
+  overflow: hidden;
+}
+
+nav h1 {
+  font-size: 30px;
+  font-family: "Gilroy-Regular", sans-serif;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  text-align: justify;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  font-size: 25px;
+  border-bottom: 1px solid #ccc;
+  font-family: "Gilroy-Light", sans-serif;
+  padding: 20px;
+  color: #000;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+nav ul li:hover {
+  background-color: #ccc;
+  padding-left: 30px;
+}
+
+/* Main Section */
+
+main {
+  /* background-color: aquamarine; */
+  padding: 50px;
+  max-width: 1200px;
+}
+
+section {
+  /* background-color: brown; */
+  margin-bottom: 50px;
+  
+  scroll-margin-top: 80px;
+}
+
+
+section article {
+  /* background-color: darkmagenta; */
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+}
+
+section article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section article ul li {
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+section h2 {
+  padding-bottom: 10px;
+  font-size: 25px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-family: "Gilroy-Light 400", sans-serif;
+}
+
+code {
+  white-space: pre-line;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  header {
+    height: 350px;        /* 🔥 REMOVE 100vh */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    overflow: visible;  /* 🔥 REMOVE internal scroll */
+    background: #fff;
+    z-index: 10;
+    overflow-y: scroll;
+  }
+
+  section{
+    scroll-margin: 400px;
+  }
+
+  section article {
+   text-align: left;
+  }
+}
